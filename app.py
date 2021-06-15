@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 import requests
 import json
 
@@ -11,6 +11,7 @@ def index():
     data = json.loads(covid_world_data.content)
     
     return render_template('index.html', data = data)
+
 
 
 
